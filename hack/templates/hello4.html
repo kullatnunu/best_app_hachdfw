@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Show templates</title>
+ {% load static %}
+ <link href="{% static 'css/style.css' %}" rel="stylesheet" type = "text/css" />
+</head>
+<body>
+ <div id ="home">
+  <img src="{% static 'images/hack.png' %}" alt="Welcome" width="64" height="32"/>
+  <span class="info">Welcome:{{username}}</span>
+  <h2>Time Now: {{now}}</h2>
+  <h1>Pi Video Surveillance</h1>
+  <video width="530" height="440" controls autoplay>
+  <source src="{% static 'videos/sample1_encoded.mp4' %}" type="video/mp4"></source>
+  </video>
+  <!--<img src="{% url 'video_feed' %}"/>-->
+ </div>
+</body>
+</html>
